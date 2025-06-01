@@ -17,8 +17,8 @@ public class TransactionController {
     }
 
     @PostMapping
-    public Transaction create(@RequestParam String merchantId, @RequestParam Double amount) {
-        return service.createTransaction(merchantId, amount);
+    public Transaction create(@RequestParam UUID userId, @RequestParam Double amount) {
+        return service.createTransaction(userId, amount);
     }
 
     @GetMapping("/{id}")
