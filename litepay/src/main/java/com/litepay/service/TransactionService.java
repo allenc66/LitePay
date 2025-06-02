@@ -34,6 +34,6 @@ public class TransactionService {
 
     public Transaction getTransaction(UUID id) {
         return transactionRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+                .orElseThrow(() -> new RuntimeException("Transaction not found with ID: " + id));
     }
 }
